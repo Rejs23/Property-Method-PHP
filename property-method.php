@@ -1,16 +1,16 @@
 <?php
 class produk{
-  public $jenisBarang="Laptop Gaming", 
-         $merk="Lenovo",
-         $model="Ideapad 3i",
-         $proci="Intel core I7-10750H",
-         $ram="16 GB",
-         $storage="SSD 512GB", 
-         $gpu="Nvidia GTX 1650 4GB GDDR6",
-         $garansi="2 Years Premium Care + 1 Y ADP",
-         $harga="Rp 16.999.000";
+  public $jenisBarang="jenisBarang", 
+         $merk="Merk Barang",
+         $model="Model barang",
+         $proci="Prosessor {optional}",
+         $ram="Kapasitas ram {optional}",
+         $storage="Kapasitas Penyimpanan {optional}", 
+         $gpu="GPU/VGA {optional}",
+         $garansi="garansi barang",
+         $harga="harga barang";
             // membuat method
-            public function printProduk(){
+            public function printProduk1(){
                 return "❯ $this->jenisBarang | $this->merk | $this->model | $this->proci | $this->ram | $this->storage | $this->gpu | $this->garansi | $this->harga | ";
             }
             public function printProduk2(){
@@ -21,6 +21,17 @@ class produk{
             }
 }
 $produk1 = new produk();
+
+    $produk1->jenisBarang="Laptop Gaming";
+    $produk1->merk="Lenovo";
+    $produk1->model="Ideapad 3i";
+    $produk1->proci="Intel core I7-7600U";
+    $produk1->ram="16 GB";
+    $produk1->storage="SSD 512GB";
+    $produk1->gpu="Nvidia GTX 1650 4GB GDDR6";
+    $produk1->garansi="2 Years Premium Care + 1 Y ADP";
+    $produk1->harga="Rp 16.999.000";
+
 $produk2 = new produk();
 
     $produk2->jenisBarang="Laptop Bussiness";
@@ -46,9 +57,10 @@ $produk3 = new produk();
 
 echo "List Produk Shift Komputer";
 echo "<br>";
-echo $produk1->printProduk();
+echo $produk1->printProduk1();
 echo "<br>";
 echo $produk2->printProduk2();
 echo "<br>";
 echo $produk3->printProduk3();
+
 ?>
